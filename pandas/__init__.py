@@ -99,3 +99,7 @@ Here are just a few of the things that pandas does well:
     conversion, moving window statistics, moving window linear regressions,
     date shifting and lagging, etc.
 """
+
+from ._version import get_versions
+__version__ = get_versions()['version']
+del get_versions

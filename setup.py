@@ -31,13 +31,14 @@ def is_platform_mac():
 
 
 min_numpy_ver = '1.12.0'
+max_numpy_ver = '1.16.4'
 setuptools_kwargs = {
     'install_requires': [
         'python-dateutil >= 2.5.0',
         'pytz >= 2011k',
-        'numpy >= {numpy_ver}'.format(numpy_ver=min_numpy_ver),
+        'numpy <= {numpy_ver}'.format(numpy_ver=max_numpy_ver),
     ],
-    'setup_requires': ['numpy >= {numpy_ver}'.format(numpy_ver=min_numpy_ver)],
+    'setup_requires': ['numpy <= {numpy_ver}'.format(numpy_ver=max_numpy_ver)],
     'zip_safe': False,
 }
 
